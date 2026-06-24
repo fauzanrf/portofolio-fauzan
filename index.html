@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
@@ -390,7 +390,7 @@
             <h4>PT Nusalogi Integrasi Sistem</h4>
             <ul>
               <li><i class="fas fa-circle"></i> Lead technical project planning and implementation for infrastructure,
-                server,</li>
+                server.</li>
               <li><i class="fas fa-circle"></i> Managed project documentation including quotation, technical scope,
                 implementation records, and BAST handover documents.</li>
               <li><i class="fas fa-circle"></i> Supported onsite technical implementation, device installation, and
@@ -572,6 +572,8 @@
             <h4>BNSP Junior Networking</h4>
             <p>Certified competency in junior-level networking and infrastructure</p>
             <div class="cert-status certified"><i class="fas fa-check-circle"></i> Certified</div>
+            <a href="assets/bnsp-networking.pdf" target="_blank" class="btn-view-cert">View Certificate <i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 
@@ -581,6 +583,8 @@
             <h4>BNSP Cloud Computing</h4>
             <p>Certified competency in cloud computing fundamentals and services</p>
             <div class="cert-status certified"><i class="fas fa-check-circle"></i> Certified</div>
+            <a href="assets/bnsp-cloud.pdf" target="_blank" class="btn-view-cert">View Certificate <i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 
@@ -590,6 +594,8 @@
             <h4>BNSP Junior Web Programming</h4>
             <p>Certified competency in junior-level web programming and development</p>
             <div class="cert-status certified"><i class="fas fa-check-circle"></i> Certified</div>
+            <a href="assets/bnsp-web.pdf" target="_blank" class="btn-view-cert">View Certificate <i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 
@@ -599,6 +605,8 @@
             <h4>MTCNA (MikroTik Certified Network Associate)</h4>
             <p>Certified competency in MikroTik RouterOS features and network configuration</p>
             <div class="cert-status certified"><i class="fas fa-check-circle"></i> Certified</div>
+            <a href="assets/mtcna.pdf" target="_blank" class="btn-view-cert">View Certificate <i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
       </div>
@@ -612,7 +620,9 @@
 
       <div class="certs-grid">
         <div class="cert-card badge-card reveal">
-          <div class="cert-icon badge-icon"><i class="fab fa-aws"></i></div>
+          <div class="cert-icon badge-icon" style="background: transparent; padding: 2px;">
+            <img src="assets/aws.png" alt="AWS Academy" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
           <div class="cert-info">
             <h4>AWS Academy Cloud Computing</h4>
             <p>Amazon Web Services cloud architecture, deployment, and management</p>
@@ -630,7 +640,9 @@
         </div>
 
         <div class="cert-card badge-card reveal">
-          <div class="cert-icon badge-icon"><i class="fas fa-server"></i></div>
+          <div class="cert-icon badge-icon" style="background: transparent; padding: 2px;">
+            <img src="assets/fcia.png" alt="FCIA" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
           <div class="cert-info">
             <h4>FCIA Server xFusion</h4>
             <p>xFusion certified in enterprise server deployment and configuration</p>
@@ -752,7 +764,13 @@
   </button>
 
   <!-- JavaScript -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=3"></script>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <span class="image-modal-close">&times;</span>
+    <img class="image-modal-content" id="imgModalTarget">
+  </div>
 
 </body>
 

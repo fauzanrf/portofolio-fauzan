@@ -314,3 +314,39 @@ toolItems.forEach(item => {
 // ===== Initialize =====
 initTheme();
 handleScroll();
+
+// ===== Image Modal =====
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("Initializing Image Modal...");
+  const imageModal = document.getElementById("imageModal");
+  const imgModalTarget = document.getElementById("imgModalTarget");
+  const imageModalClose = document.getElementsByClassName("image-modal-close")[0];
+  const badgeImages = document.querySelectorAll(".badge-icon img");
+  console.log("Found modal:", imageModal);
+  console.log("Found badge images:", badgeImages.length);
+
+  if(imageModal && imgModalTarget && badgeImages.length > 0) {
+    badgeImages.forEach(img => {
+      img.addEventListener("click", function() {
+        console.log("Image clicked!", this.src);
+        imageModal.style.display = "block";
+        imgModalTarget.src = this.src;
+      });
+    });
+
+    if(imageModalClose) {
+      imageModalClose.addEventListener("click", function() {
+        imageModal.style.display = "none";
+      });
+    }
+
+    // Close modal when clicking outside the image
+    window.addEventListener("click", function(event) {
+      if (event.target == imageModal || event.target == imgModalTarget) {
+        imageModal.style.display = "none";
+      }
+    });
+  } else {
+    console.log("Modal setup failed. Elements missing.");
+  }
+});
